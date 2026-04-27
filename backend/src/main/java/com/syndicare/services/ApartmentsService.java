@@ -83,7 +83,7 @@ public class ApartmentsService {
             User resident = userRepository.findById(dto.getResidentId())
                     .orElseThrow(() -> new ResourcesNotFoundException("Resident not found"));
             apartment.setResident(resident);
-        }
+        } else apartment.setResident(null);
     }
 
     private List<ApartmentsGetAndPostResponseDto> mapList(List<Apartment> apartments) {

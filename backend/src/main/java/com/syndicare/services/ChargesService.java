@@ -49,7 +49,7 @@ public class ChargesService {
             if (!existing.isEmpty())
                 continue;
 
-            BigDecimal amount = apartment.getSurface().multiply(rate).setScale(2, RoundingMode.HALF_UP);
+            BigDecimal amount = apartment.getSurface().multiply(rate);
             Charge charge = Charge.builder()
                     .apartment(apartment)
                     .period(period)

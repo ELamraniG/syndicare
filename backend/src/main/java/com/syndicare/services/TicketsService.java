@@ -97,6 +97,7 @@ public class TicketsService {
 
     public void ticketsDeleteService(Long id) {
         Ticket ticket = getTicketById(id);
+        if (ticket.getPhotoPath() != null) fileStorageService.delete(ticket.getPhotoPath());
         ticketRepository.deleteById(id);
     }
 }

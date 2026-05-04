@@ -37,9 +37,6 @@ public class DocumentsService {
 
     public DocumentsGetAndPostResponseDto documentsPostService(MultipartFile file, String title, String description,
                                                                  DocumentCategory category, Long buildingId) {
-        if (file == null || file.isEmpty())
-            throw new InvalidRequestException("File required");
-
         String path = fileStorageService.store(file, "documents");
         Document document = new Document();
         document.setTitle(title);

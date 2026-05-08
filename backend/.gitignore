@@ -1,0 +1,20 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Compiled
+*.class
+
+# Logs
+*.log
+spring.log
+
+# Local
+HELP.md
+.mvn/
+
+# Application data
+uploads/
+*.db
